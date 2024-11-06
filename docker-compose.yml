@@ -1,0 +1,19 @@
+services:
+  web:
+    container_name: web
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    command: gunicorn keywords_generator.wsgi:application --bind 0.0.0.0:8000 --timeout 30 --workers 2 --reload  
+    ports:
+      - 8000:8000
+    volumes:
+      - static_volume:/usr/src/app/staticfiles
+      - media_volume:/usr/src/app/mediafiles
+      - ./app/:/usr/src/app/
+    expose:
+      - 8000
+
+volumes:
+  static_volume:
+  media_volume:
