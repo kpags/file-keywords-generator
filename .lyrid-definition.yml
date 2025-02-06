@@ -8,8 +8,8 @@ modules:
       ports:
       - alias: "http"
         port: 8080
-    config:
-      instance: "WjyaD7R4Zk"
+      config:
+        instance: "WjyaD7R4Zk"
     functions:
       - name: entry
         entry: wsgi.py
