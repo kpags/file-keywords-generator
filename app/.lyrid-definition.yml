@@ -4,7 +4,12 @@ ignoreFiles: .env .venv __pycache__ mediafiles staticfiles
 modules:
   - name: keyword-generator-module
     language: docker
-    description: Module for django project
+    description: 
+      ports:
+      - alias: "http"
+        port: 8080
+    config:
+      instance: "WjyaD7R4Zk"
     functions:
       - name: entry
         entry: wsgi.py
