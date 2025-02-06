@@ -17,3 +17,4 @@ COPY ./entrypoint.sh /usr/src/app/entrypoint.sh
 COPY . /usr/src/app
 
 ENTRYPOINT ["/bin/bash", "/usr/src/app/entrypoint.sh"]
+CMD ["gunicorn", "keywords_generator.wsgi:application", "--bind", "0.0.0.0:8000", "--timeout", "30", "--workers", "2"]

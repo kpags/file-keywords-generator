@@ -3,8 +3,7 @@ description: Generate keywords that are common from a PDF file
 ignoreFiles: .env .venv __pycache__ mediafiles staticfiles
 modules:
   - name: keyword-generator-module
-    language: python3.10
-    web: django
+    language: docker
     description: Module for django project
     functions:
       - name: entry
