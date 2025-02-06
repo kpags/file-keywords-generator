@@ -4,7 +4,7 @@ ignoreFiles: .env .venv __pycache__ mediafiles staticfiles
 modules:
   - name: keyword-generator-module
     language: docker
-    description:
+    description: Docker App
     ports:
       - alias: "http"
         port: 8000
