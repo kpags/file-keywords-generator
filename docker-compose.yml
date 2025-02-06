@@ -3,7 +3,7 @@ services:
     container_name: web
     build:
       context: ./app
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     command: gunicorn keywords_generator.wsgi:application --bind 0.0.0.0:8000 --timeout 30 --workers 2 # --reload  
     ports:
       - 8000:8000
